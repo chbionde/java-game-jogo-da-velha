@@ -2,8 +2,8 @@ package tictactoe.io;
 
 public final class Output {
     private Output() {};
-    public static void writeNewLine(Object obj) {
-        write(null, true);
+    public static void writeNewLine() {
+        write(null);
     }
 
     public static void write(Object obj) {
