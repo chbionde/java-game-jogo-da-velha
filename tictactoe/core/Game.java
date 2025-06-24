@@ -16,10 +16,12 @@ public class Game {
             winner = play(players.next());
         }
 
-        if (board.isFull()) {
-            Output.write("No winner");
-        } else {
+        Output.write(board);
+
+        if (winner != null) {
             Output.write(String.format("%s is the winner!", winner));
+        } else {
+            Output.write("No winner");
         }
     }
 
