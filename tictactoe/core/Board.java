@@ -59,5 +59,14 @@ public class Board {
         return null;
     }
 
-    
+    public boolean isFull() {
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (matrix[i][j] == Symbol.NONE){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

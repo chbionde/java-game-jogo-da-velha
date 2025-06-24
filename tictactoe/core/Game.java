@@ -10,12 +10,17 @@ public class Game {
     public void start() {
 
         Symbol winner = null;
-        while (winner ==  null) {
+        while (winner ==  null && !board.isFull()) {
             Output.writeNewLine();
             Output.write(board);
             winner = play(players.next());
         }
-        Output.write(String.format("%s is the winner!", winner));
+
+        if (board.isFull()) {
+            Output.write("No winner");
+        } else {
+            Output.write(String.format("%s is the winner!", winner));
+        }
     }
 
     private Symbol play(Symbol symbol) {
