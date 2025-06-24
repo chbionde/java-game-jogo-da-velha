@@ -6,6 +6,10 @@ public final class Output {
         write(null, true);
     }
 
+    public static void write(Object obj) {
+        write(obj, true);
+    }
+
     public static void write(Object obj, boolean addNewLine) {
         if (obj == null){
             System.out.println();
