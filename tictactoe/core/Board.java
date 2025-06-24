@@ -2,6 +2,7 @@ package tictactoe.core;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.classfile.instruction.ReturnInstruction;
 import java.util.Arrays;
 import static java.util.Objects.requireNonNull;
 
@@ -37,7 +38,7 @@ public class Board {
         return sw.toString();
     }
 
-    public void update(Symbol symbol, Coord coord) {
+    public Symbol update(Symbol symbol, Coord coord) {
         requireNonNull(symbol);
         requireNonNull(coord);
 
@@ -50,5 +51,13 @@ public class Board {
         }
 
         matrix[coord.i()][coord.j()] = symbol;
+        return findSequence();
     }
+
+    private Symbol findSequence() {
+        //TODO
+        return null;
+    }
+
+    
 }
